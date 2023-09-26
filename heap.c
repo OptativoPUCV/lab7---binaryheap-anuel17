@@ -31,8 +31,8 @@ void heap_push(Heap* pq, void* data, int priority){
     return;
   }
   if(pq->size == pq->capac){
-    pq->capac *= 2 + 1;
-    pq->heapArray = (heapElem*)realloc(pq->heapArray,sizeof(heapElem)* pq->capac);
+    pq->capac = pq->capac * 2 + 1;
+    pq->heapArray = (heapElem*)realloc(pq->heapArray, sizeof(heapElem) * pq->capac);
   }
   heapElem nuevoElem;
   nuevoElem.data = data;
