@@ -38,5 +38,5 @@ Heap* createHeap(){
   nuevo->size = 1;
   nuevo->heapArray= (heapElemen*)malloc(sizeof(heapElemen)*nuevo->size);
   
-  return NULL;
+  return nuevo;
 }
