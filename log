@@ -242,3 +242,19 @@ heap.c:36:23: error: ‘p’ undeclared (first use in this function); did you me
 heap.c:36:23: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 c3e767b
+Tue 26 Sep 2023 11:18:24 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:36:23: error: ‘p’ undeclared (first use in this function); did you mean ‘pq’?
+   36 |   nuevoElem.priority= p;
+      |                       ^
+      |                       pq
+heap.c:36:23: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:34:12: error: variable ‘nuevoElem’ set but not used [-Werror=unused-but-set-variable]
+   34 |   heapElem nuevoElem;
+      |            ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ec34eb3
