@@ -468,3 +468,20 @@ heap.c:70:8: error: ‘largestIndex’ undeclared (first use in this function); 
 heap.c:70:8: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 f2eedfa
+Tue 26 Sep 2023 11:45:07 PM UTC: 
+ heap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:73:5: error: unknown type name ‘heapEle’; did you mean ‘heapElem’?
+   73 |     heapEle temp = pq->heapArray[index];
+      |     ^~~~~~~
+      |     heapElem
+heap.c:73:20: error: incompatible types when initializing type ‘int’ using type ‘heapElem’ {aka ‘struct nodo’}
+   73 |     heapEle temp = pq->heapArray[index];
+      |                    ^~
+heap.c:75:33: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘int’
+   75 |     pq->heapArray[largoIndex] = temp;
+      |                                 ^~~~
+Compilation failed
+04f0512
