@@ -73,6 +73,7 @@ void heap_pop(Heap* pq){
     heapElem temp = pq->heapArray[index];
     pq->heapArray[index] = pq->heapArray[largoIndex];
     pq->heapArray[largoIndex] = temp;
+    inde = largoIndex;
   }
 }
 

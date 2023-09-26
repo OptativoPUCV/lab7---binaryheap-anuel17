@@ -491,3 +491,15 @@ Tue 26 Sep 2023 11:45:14 PM UTC:
  tests:  7|1
 total_score: 60/70
 9f993ad
+Tue 26 Sep 2023 11:45:48 PM UTC: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:76:5: error: ‘inde’ undeclared (first use in this function); did you mean ‘index’?
+   76 |     inde = largoIndex;
+      |     ^~~~
+      |     index
+heap.c:76:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+59efc38
