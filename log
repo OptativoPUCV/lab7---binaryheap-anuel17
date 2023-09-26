@@ -369,3 +369,25 @@ heap.c:44:38: error: incompatible types when assigning to type ‘heapElem’ {a
       |                                      ^~~~
 Compilation failed
 106bfd1
+Tue 26 Sep 2023 11:23:12 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:36:24: error: ‘p’ undeclared (first use in this function); did you mean ‘pq’?
+   36 |   nuevoElem.priority = p;
+      |                        ^
+      |                        pq
+heap.c:36:24: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:42:5: error: unknown type name ‘heamElem’; did you mean ‘heapElem’?
+   42 |     heamElem temp = pq->heapArray[index];
+      |     ^~~~~~~~
+      |     heapElem
+heap.c:42:21: error: incompatible types when initializing type ‘int’ using type ‘heapElem’ {aka ‘struct nodo’}
+   42 |     heamElem temp = pq->heapArray[index];
+      |                     ^~
+heap.c:44:38: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘int’
+   44 |     pq->heapArray[(index - 1) / 2] = temp;
+      |                                      ^~~~
+Compilation failed
+52c4fdf
