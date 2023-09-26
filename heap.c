@@ -70,7 +70,7 @@ void heap_pop(Heap* pq){
     if(largoIndex == index){
       break;
     }
-    heapEle temp = pq->heapArray[index];
+    heapElem temp = pq->heapArray[index];
     pq->heapArray[index] = pq->heapArray[largoIndex];
     pq->heapArray[largoIndex] = temp;
   }
