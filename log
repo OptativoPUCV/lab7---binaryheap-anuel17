@@ -456,3 +456,15 @@ heap.c:70:8: error: ‘largestIndex’ undeclared (first use in this function); 
 heap.c:70:8: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 7ac18c0
+Tue 26 Sep 2023 11:42:18 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:70:8: error: ‘largestIndex’ undeclared (first use in this function); did you mean ‘largoIndex’?
+   70 |     if(largestIndex == index){
+      |        ^~~~~~~~~~~~
+      |        largoIndex
+heap.c:70:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+f2eedfa

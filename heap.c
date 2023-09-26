@@ -67,7 +67,7 @@ void heap_pop(Heap* pq){
     if(leftIndex < pq->size && pq->heapArray[leftIndex].priority > pq->heapArray[largoIndex].priority){
       largoIndex= leftIndex;
     }
-    if(largestIndex = index){
+    if(largestIndex == index){
       break;
     }
   }
