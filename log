@@ -28,3 +28,20 @@ heap.c:38:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 110c930
+Tue 26 Sep 2023 10:42:32 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:36:3: error: conversion to non-scalar type requested
+   36 |   Heap* nuevo= (Heap)malloc(sizeof(Heap));
+      |   ^~~~
+heap.c:36:9: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+   36 |   Heap* nuevo= (Heap)malloc(sizeof(Heap));
+      |         ^~~~~
+heap.c:38:1: error: control reaches end of non-void function [-Werror=return-type]
+   38 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+cfcef26
