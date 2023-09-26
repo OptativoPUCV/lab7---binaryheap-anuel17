@@ -106,3 +106,18 @@ heap.c:39:33: error: expected expression before ‘)’ token
       |                                 ^
 Compilation failed
 50bf028
+Tue 26 Sep 2023 11:07:58 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:39:22: error: ‘heapElemen’ undeclared (first use in this function); did you mean ‘heapElem’?
+   39 |   nuevo->heapArray= (heapElemen*)malloc(sizeof(heapElemen)*nuevo->capac);
+      |                      ^~~~~~~~~~
+      |                      heapElem
+heap.c:39:22: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:39:33: error: expected expression before ‘)’ token
+   39 |   nuevo->heapArray= (heapElemen*)malloc(sizeof(heapElemen)*nuevo->capac);
+      |                                 ^
+Compilation failed
+81abffc
