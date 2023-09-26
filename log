@@ -211,3 +211,19 @@ Tue 26 Sep 2023 11:16:54 PM UTC:
  tests:  2|2
 total_score: 20/70
 a1a8ff8
+Tue 26 Sep 2023 11:18:09 PM UTC: 
+ heap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:36:13: error: ‘prerity’ undeclared (first use in this function); did you mean ‘priority’?
+   36 |   nuevoElem-prerity= p;
+      |             ^~~~~~~
+      |             priority
+heap.c:36:13: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:36:22: error: ‘p’ undeclared (first use in this function); did you mean ‘pq’?
+   36 |   nuevoElem-prerity= p;
+      |                      ^
+      |                      pq
+Compilation failed
+a815b1e
