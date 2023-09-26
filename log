@@ -175,3 +175,17 @@ Tue 26 Sep 2023 11:12:33 PM UTC:
  tests:  2|2
 total_score: 20/70
 b3fc7ca
+Tue 26 Sep 2023 11:16:30 PM UTC: 
+ heap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:6: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   30 |   if(pq->size = pq->capac){
+      |      ^~
+heap.c:32:5: error: conversion to non-scalar type requested
+   32 |     pq->heapArray = (heapElem)realloc(pq->heapArray,sizeof(heapElem)* pq->capac);
+      |     ^~
+cc1: all warnings being treated as errors
+Compilation failed
+87b973e
